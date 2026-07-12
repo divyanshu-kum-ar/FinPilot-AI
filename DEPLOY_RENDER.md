@@ -20,7 +20,7 @@ This project deploys as **two separate Render services**:
 | **Name** | `finpilot-backend` (or any name) |
 | **Region** | Singapore (closest to India) |
 | **Branch** | `main` |
-| **Root Directory** | `Expense-Tracker-with-Ai-Insights-main/backend` |
+| **Root Directory** | `backend` |
 | **Runtime** | `Node` |
 | **Build Command** | `npm install` |
 | **Start Command** | `node server.js` |
@@ -51,9 +51,9 @@ Add these in Render Dashboard → Your Backend Service → **Environment**:
 |---|---|
 | **Name** | `finpilot-frontend` (or any name) |
 | **Branch** | `main` |
-| **Root Directory** | `Expense-Tracker-with-Ai-Insights-main/frontend` |
+| **Root Directory** | `frontend` |
 | **Build Command** | `npm install && npm run build` |
-| **Publish Directory** | `Expense-Tracker-with-Ai-Insights-main/frontend/dist` |
+| **Publish Directory** | `dist` |
 
 ### Frontend Environment Variables
 
