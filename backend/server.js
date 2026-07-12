@@ -12,8 +12,22 @@ connectDB();
 
 const app = express();
 
-// Middleware
-app.use(cors());
+// CORS — allow the deployed frontend URL in production, localhost in development
+const allowedOrigins = [
+  process.env.FRONTEND_URL,          // Render frontend URL (set in Render dashboard)
+  'http://localhost:5173',            // Vite dev server
+  'http://localhost:4173',            // Vite preview
+].filter(Boolean);                    // remove undefined if FRONTEND_URL not set yet
+
+app.use(cors({
+  origin: (origin, callback) => {
+    // Allow requests with no origin (mobile apps, curl, Render health checks)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) return callback(null, true);
+    callback(new Error(`CORS: origin ${origin} not allowed`));
+  },
+  credentials: true,
+}));
 app.use(express.json());
 
 const aiRoutes = require('./src/routes/aiRoutes')

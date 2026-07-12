@@ -1,0 +1,6 @@
+/* ─── Render Static Site — SPA Routing ──────────────────────────────────────
+   This file tells Render to serve index.html for all routes so that
+   React Router (client-side routing) works correctly after page refresh.
+   Without this, refreshing /transactions or /ai-insights would return 404.
+──────────────────────────────────────────────────────────────────────────── */
+/*  /index.html  200
