@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-200 font-medium py-2 px-4 rounded-lg transition-colors;
+  }
+
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border dark:border-gray-700;
+  }
+}
+
+@layer utilities {
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.3s ease-out;
+  }
+
+  @keyframes gradient-x {
+    0%, 100% {
+      background-position: 0% center;
+    }
+    50% {
+      background-position: 100% center;
+    }
+  }
+
+  .animate-gradient-x {
+    background-size: 200% 200%;
+    animation: gradient-x 6s ease infinite;
+  }
+
+  @keyframes color-fade {
+    0% {
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    }
+    25% {
+      background: linear-gradient(135deg, #06b6d4, #3b82f6);
+    }
+    50% {
+      background: linear-gradient(135deg, #10b981, #06b6d4);
+    }
+    75% {
+      background: linear-gradient(135deg, #f59e0b, #10b981);
+    }
+    100% {
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    }
+  }
+
+  .animate-color-fade {
+    animation: color-fade 8s ease-in-out infinite;
+  }
+
+  @keyframes sunlight {
+    0% {
+      background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    }
+    25% {
+      background: linear-gradient(135deg, #fcd34d, #fbbf24);
+    }
+    50% {
+      background: linear-gradient(135deg, #fef3c7, #fcd34d);
+    }
+    75% {
+      background: linear-gradient(135deg, #f59e0b, #fef3c7);
+    }
+    100% {
+      background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    }
+  }
+
+  .animate-sunlight {
+    animation: sunlight 8s ease-in-out infinite;
+  }
+
+  @keyframes night-sky {
+    0% {
+      background: linear-gradient(135deg, #1e293b, #0f172a);
+    }
+    25% {
+      background: linear-gradient(135deg, #334155, #1e293b);
+    }
+    50% {
+      background: linear-gradient(135deg, #475569, #334155);
+    }
+    75% {
+      background: linear-gradient(135deg, #0f172a, #475569);
+    }
+    100% {
+      background: linear-gradient(135deg, #1e293b, #0f172a);
+    }
+  }
+
+  .animate-night-sky {
+    animation: night-sky 8s ease-in-out infinite;
+  }
+
+  /* Floating animation keyframes */
+  @keyframes float1 {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes float2 {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+
+  @keyframes float3 {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-25px);
+    }
+  }
+
+  @keyframes float4 {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-18px);
+    }
+  }
+
+  /* Animation classes for floating circles */
+  .animate-float1 {
+    animation: float1 6s ease-in-out infinite;
+  }
+
+  .animate-float2 {
+    animation: float2 5s ease-in-out infinite;
+  }
+
+  .animate-float3 {
+    animation: float3 7s ease-in-out infinite;
+  }
+
+  .animate-float4 {
+    animation: float4 6.5s ease-in-out infinite;
+  }
+
+  /* Drop animation for login card */
+  @keyframes drop {
+    0% {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+    80% {
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .drop-animation {
+    animation: drop 0.8s ease forwards;
+  }
+}
