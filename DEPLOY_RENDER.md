@@ -160,7 +160,7 @@ The `db.js` config includes a 10-second connection timeout suitable for producti
 
 - [ ] Create new **Web Service**
 - [ ] Connect GitHub repo
-- [ ] Set Root Directory: `Expense-Tracker-with-Ai-Insights-main/backend`
+- [ ] Set Root Directory: `backend`
 - [ ] Set Build Command: `npm install`
 - [ ] Set Start Command: `node server.js`
 - [ ] Add all 6 environment variables (PORT, NODE_ENV, MONGO_URI, FIREBASE_SERVICE_ACCOUNT, GEMINI_API_KEY, FRONTEND_URL)
@@ -170,9 +170,9 @@ The `db.js` config includes a 10-second connection timeout suitable for producti
 
 - [ ] Create new **Static Site**
 - [ ] Connect same GitHub repo
-- [ ] Set Root Directory: `Expense-Tracker-with-Ai-Insights-main/frontend`
+- [ ] Set Root Directory: `frontend`
 - [ ] Set Build Command: `npm install && npm run build`
-- [ ] Set Publish Directory: `Expense-Tracker-with-Ai-Insights-main/frontend/dist`
+- [ ] Set Publish Directory: `dist`
 - [ ] Add all 7 VITE environment variables
 - [ ] Deploy and verify the site loads
 
