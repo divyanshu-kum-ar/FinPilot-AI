@@ -47,7 +47,7 @@ const Footer = () => {
             <div className="flex items-center space-x-2">
               <Wallet className="w-6 h-6 text-blue-600 dark:text-blue-400" />
               <span className="text-lg font-bold bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
-                Expense Tracker
+                FinPilot AI
               </span>
             </div>
             <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -55,7 +55,7 @@ const Footer = () => {
               insights.
             </p>
             <p className="text-xs text-gray-500 dark:text-gray-500">
-              © {currentYear} Expense Tracker. All rights reserved.
+              © {currentYear} FinPilot AI. All rights reserved.
             </p>
             <p className="text-xs text-gray-400 dark:text-gray-600 italic">
               Made with ❤️ by Divyanshu Kumar

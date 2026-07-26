@@ -29,7 +29,7 @@ function App() {
         <TransactionProvider>
           <Router>
             {/* 3. Remove dark classes here, they are now on the <html> tag */}
-            <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+            <div className="min-h-screen bg-gray-50 dark:bg-[#060814]">
               <Toaster position="top-right" />
               <Routes>
                 <Route path="/login" element={<Login />} />
@@ -42,10 +42,9 @@ function App() {
                           isOpen={sidebarOpen}
                           onToggle={toggleSidebar}
                         />
-                        <div className="flex-1 flex flex-col overflow-hidden">
-                          <Navbar onToggleSidebar={toggleSidebar} />
-                          {/* Also remove dark class from here */}
-                          <main className="flex-1 overflow-x-hidden overflow-y-auto bg-gray-50 dark:bg-gray-900">
+                        <div className="flex-1 flex flex-col overflow-hidden relative">
+                          <Navbar onToggleSidebar={toggleSidebar} isSidebarOpen={sidebarOpen} />
+                          <main className="flex-1 overflow-x-hidden overflow-y-auto bg-gray-50 dark:bg-[#060814]">
                             <div className="container mx-auto px-6 py-8">
                               <Dashboard />
                             </div>
@@ -64,9 +63,9 @@ function App() {
                           isOpen={sidebarOpen}
                           onToggle={toggleSidebar}
                         />
-                        <div className="flex-1 flex flex-col overflow-hidden">
-                          <Navbar onToggleSidebar={toggleSidebar} />
-                          <main className="flex-1 overflow-x-hidden overflow-y-auto bg-gray-50 dark:bg-gray-900">
+                        <div className="flex-1 flex flex-col overflow-hidden relative">
+                          <Navbar onToggleSidebar={toggleSidebar} isSidebarOpen={sidebarOpen} />
+                          <main className="flex-1 overflow-x-hidden overflow-y-auto bg-gray-50 dark:bg-[#060814]">
                             <div className="container mx-auto px-6 py-8">
                               <Transactions />
                             </div>
@@ -85,9 +84,9 @@ function App() {
                           isOpen={sidebarOpen}
                           onToggle={toggleSidebar}
                         />
-                        <div className="flex-1 flex flex-col overflow-hidden">
-                          <Navbar onToggleSidebar={toggleSidebar} />
-                          <main className="flex-1 overflow-x-hidden overflow-y-auto bg-gray-50 dark:bg-gray-900">
+                        <div className="flex-1 flex flex-col overflow-hidden relative">
+                          <Navbar onToggleSidebar={toggleSidebar} isSidebarOpen={sidebarOpen} />
+                          <main className="flex-1 overflow-x-hidden overflow-y-auto bg-gray-50 dark:bg-[#060814]">
                             <div className="container mx-auto px-6 py-8">
                               <Reports />
                             </div>
@@ -106,9 +105,9 @@ function App() {
                           isOpen={sidebarOpen}
                           onToggle={toggleSidebar}
                         />
-                        <div className="flex-1 flex flex-col overflow-hidden">
-                          <Navbar onToggleSidebar={toggleSidebar} />
-                          <main className="flex-1 overflow-x-hidden overflow-y-auto bg-gray-50 dark:bg-gray-900">
+                        <div className="flex-1 flex flex-col overflow-hidden relative">
+                          <Navbar onToggleSidebar={toggleSidebar} isSidebarOpen={sidebarOpen} />
+                          <main className="flex-1 overflow-x-hidden overflow-y-auto bg-gray-50 dark:bg-[#060814]">
                             <div className="container mx-auto px-6 py-8">
                               <AIInsightsPage />
                             </div>
@@ -127,9 +126,9 @@ function App() {
                           isOpen={sidebarOpen}
                           onToggle={toggleSidebar}
                         />
-                        <div className="flex-1 flex flex-col overflow-hidden">
-                          <Navbar onToggleSidebar={toggleSidebar} />
-                          <main className="flex-1 overflow-x-hidden overflow-y-auto bg-gray-50 dark:bg-gray-900">
+                        <div className="flex-1 flex flex-col overflow-hidden relative">
+                          <Navbar onToggleSidebar={toggleSidebar} isSidebarOpen={sidebarOpen} />
+                          <main className="flex-1 overflow-x-hidden overflow-y-auto bg-gray-50 dark:bg-[#060814]">
                             <div className="container mx-auto px-6 py-8">
                               <Profile />
                             </div>

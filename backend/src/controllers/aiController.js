@@ -201,25 +201,24 @@ ${aiReportTemplate}
     return res.status(200).json({ insights: text });
 
   } catch (error) {
-    console.error('AI Insight Error:', error);
+    if (!error || error.status !== 429) {
+      console.error('AI Insight Error:', error);
+    }
 
-    // Handle quota / rate-limit errors from the Gemini API gracefully
-    // Handle quota / rate-limit errors from the Gemini API gracefully
     if (error && error.status === 429) {
       const retryDelayMs = extractRetryDelay(error);
       const retryAfterSeconds = retryDelayMs !== null ? Math.ceil(retryDelayMs / 1000) : null;
 
-      // If we have computed summary data, build a deterministic fallback report
       if (summaryData) {
         const fallbackReport = formatSummaryToReport(summaryData);
         return res.status(200).json({
           insights: fallbackReport,
           warning: 'Returned fallback insights because the AI quota was exceeded.',
-          retryAfterSeconds
+          retryAfterSeconds,
+          summary: summaryData
         });
       }
 
-      // No summary available: surface a clear error
       return res.status(429).json({
         error: 'AI quota exceeded',
         message: 'The AI service is temporarily rate-limited. Please try again shortly.',
